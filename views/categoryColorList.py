@@ -7,7 +7,7 @@ class CategoryDetailColorList:
     def getCategoryDetailColorList(self,category):
         try:
             categoryId = self.sql.getStoreList("""
-                                                    select Id  from MekmarCom_Kategoriler where kategoriadi_en=?
+                                                    select Id  from MekmarCom_Kategoriler where kategori_link=?
                                                
                                                """,(category))[0]
             categoryDetail = self.sql.getStoreList("""
@@ -49,7 +49,7 @@ class CategoryDetailColorList:
     def getCategoryDetailFinishList(self,category):
         try:
             categoryId = self.sql.getStoreList("""
-                                                    select Id  from MekmarCom_Kategoriler where kategoriadi_en=?
+                                                    select Id  from MekmarCom_Kategoriler where kategori_link=?
                                                
                                                """,(category))[0]
             categoryDetail = self.sql.getStoreList("""

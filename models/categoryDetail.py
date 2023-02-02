@@ -12,6 +12,7 @@ class CategoryDetailSchema(Schema):
     productColorEs = fields.String()
     webp = fields.String()
     jpeg = fields.String()
+    productLink = fields.String()
 
     
 class CategoryDetailModel:
@@ -26,6 +27,7 @@ class CategoryDetailModel:
     productColorEs = ""
     webp = ""
     jpeg = ""
+    productLink:""
     
     
     

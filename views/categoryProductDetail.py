@@ -144,8 +144,8 @@ class CategoryProductDetail:
                                             mp.urunadi_es,
                                             mp.Id,
                                             mp.urunid,
-                                            (select mk.kategoriadi_en from MekmarCom_Kategoriler mk where mk.Id = mp.kategori_id) as category_name
-
+                                            (select mk.kategoriadi_en from MekmarCom_Kategoriler mk where mk.Id = mp.kategori_id) as category_name,
+                                            (select mk.kategori_link from MekmarCom_Kategoriler mk where mk.Id = mp.kategori_id) as category_link
 
                                         from MekmarCom_Products mp where mp.urunid=?
                                       
@@ -159,6 +159,7 @@ class CategoryProductDetail:
                 model.product_webp = result.Webp
                 model.product_jpeg = result.Jpeg
                 model.product_category_name = result.category_name
+                model.product_category_link = result.category_link
                 
                 liste.append(model)
             schema = CategoryProductDetailSuggestedSchema(many=True)

@@ -4,10 +4,10 @@ from views.categoryProductDetail import *
 class CategoryProductDetailApi(Resource):
     def get(self,productName):
         a = CategoryProductDetail()
-        b = a.getCategoryProductDetail(productName)
-        c = a.getCategoryProductPhotos(productName)
-        d = a.getCategoryProductDimension(productName)
-        e = a.getCategoryProductSuggested(productName)
+        b = a.getCategoryProductDetail(productName.replace('-',' '))
+        c = a.getCategoryProductPhotos(productName.replace('-',' '))
+        d = a.getCategoryProductDimension(productName.replace('-',' '))
+        e = a.getCategoryProductSuggested(productName.replace('-',' '))
         data = {
             'productDetail':b,
             'productPhotos':c,

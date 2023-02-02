@@ -21,7 +21,7 @@ class Products:
             from
             MekmarCom_Products p,MekmarCom_Kategoriler k
             where
-            p.kategori_id=k.Id and k.kategoriadi_en=?
+            p.kategori_id=k.Id and k.kategori_link=?
             order by p.sira asc
             """,(kategori)
         )

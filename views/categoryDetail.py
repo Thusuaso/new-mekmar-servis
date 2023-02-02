@@ -7,7 +7,7 @@ class CategoryDetail:
     def getCategoryDetailList(self,category):
         try:
             categoryId = self.sql.getStoreList("""
-                                                    select Id  from MekmarCom_Kategoriler where kategoriadi_en=?
+                                                    select Id  from MekmarCom_Kategoriler where kategori_link=?
                                                
                                                """,(category))[0].Id
             
@@ -40,6 +40,7 @@ class CategoryDetail:
                 model.productNameEn = item.urunadi_en
                 model.productNameFr = item.urunadi_fr
                 model.productNameEs = item.urunadi_es
+                model.productLink = item.urunadi_en.replace(' ','-')
                 model.productColorEn = item.renk_en
                 model.productColorFr = item.renk_fr
                 model.productColorEs = item.renk_es
@@ -60,7 +61,7 @@ class CategoryDetail:
             try:
                 
                 categoryId = self.sql.getStoreList("""
-                                                        select Id  from MekmarCom_Kategoriler where kategoriadi_en=?
+                                                        select Id  from MekmarCom_Kategoriler where kategori_link=?
                                                 
                                                 """,(category))[0].Id
                 
@@ -93,6 +94,8 @@ class CategoryDetail:
                     model.productNameEn = item.urunadi_en
                     model.productNameFr = item.urunadi_fr
                     model.productNameEs = item.urunadi_es
+                    model.productLink = item.urunadi_en.replace(' ','-')
+                    
                     model.productColorEn = item.renk_en
                     model.productColorFr = item.renk_fr
                     model.productColorEs = item.renk_es
@@ -112,7 +115,7 @@ class CategoryDetail:
             try:
                 
                 categoryId = self.sql.getStoreList("""
-                                                        select Id  from MekmarCom_Kategoriler where kategoriadi_en=?
+                                                        select Id  from MekmarCom_Kategoriler where kategori_link=?
                                                 
                                                 """,(category))[0].Id
                 
@@ -146,6 +149,8 @@ class CategoryDetail:
                     model.productNameEn = item.urunadi_en
                     model.productNameFr = item.urunadi_fr
                     model.productNameEs = item.urunadi_es
+                    model.productLink = item.urunadi_en.replace(' ','-')
+                    
                     model.productColorEn = item.renk_en
                     model.productColorFr = item.renk_fr
                     model.productColorEs = item.renk_es

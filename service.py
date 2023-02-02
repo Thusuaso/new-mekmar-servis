@@ -9,6 +9,8 @@ from resource_api.videos import *
 from resource_api.sendmail import *
 from resource_api.login import *
 from resource_api.register import *
+from resource_api.galleria import *
+
 
 
 from resource_api.categoryDetail import *
@@ -45,7 +47,7 @@ api.add_resource(CategoryProductDetailApi,'/home/categoryProductDetail/<string:p
 api.add_resource(CategoryDetailByFinishListApi,'/home/categoryProductFinish/<string:category>/<string:finish>')
 api.add_resource(LoginApi,'/home/login/<string:username>',methods=['GET'])
 api.add_resource(RegisterApi,'/home/register',methods=['POST'])
-
+api.add_resource(GalleriaPhotosApi,'/mekmar/galleria/getPhotos',methods=['GET'])
 
 #Depo
 api.add_resource(UsaCategoryListApi,"/usa/home/categoryProductList",methods=['GET'])

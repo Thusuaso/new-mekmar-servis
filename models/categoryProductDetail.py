@@ -75,6 +75,7 @@ class CategoryProductDetailSuggestedSchema(Schema):
     product_webp = fields.String()
     product_jpeg = fields.String()
     product_category_name = fields.String()
+    product_category_link = fields.String()
 
     
 class CategoryProductDetailSuggestedModel:
@@ -86,4 +87,5 @@ class CategoryProductDetailSuggestedModel:
     product_webp = ""
     product_jpeg = ""
     product_category_name = 0
+    product_category_link = 0
     
