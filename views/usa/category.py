@@ -14,7 +14,7 @@ class Category():
                                                     from
                                                     DepoUrunKartTB d
                                                     where
-                                                    d.MekmarSite=1
+                                                    d.MekmarSite=1 and dbo.Get_KategoriAdi(d.UrunKartID) is not null
                                                     group by dbo.Get_KategoriAdi(d.UrunKartID)
                                                     order by count(*) desc
                                                  """)
@@ -27,7 +27,8 @@ class Category():
                 model.category_fr = self.__category_fr(item.Kategori)
                 model.category_es = self.__category_es(item.Kategori)
                 model.category_produt_count = item.UrunSayisi
-                model.category_link = '/usa/usaproducts/' + model.category_en.replace(' ', '-')
+                category_link_en = item.Kategori.replace(' ', '-')
+                model.category_link = '/usa/usaproducts/' + category_link_en
                 
                 sira += 1
                 liste.append(model)

@@ -98,5 +98,5 @@ class UrunlerModel:
     surface_es = ""
     edge_es = ""
 
-    photos = FotolarModel()
+    photos = []
 

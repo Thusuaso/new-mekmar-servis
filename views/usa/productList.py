@@ -603,6 +603,7 @@ class Products():
         index = 0
         for item in self.fotolar:
             if item.UrunId == id:
+                
                 model = FotolarModel()
                 model._id = item.Id
                 model.index = index

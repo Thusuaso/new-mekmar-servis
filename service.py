@@ -42,6 +42,8 @@ api.add_resource(FabricationListApi,"/home/fabricationList",methods=["GET"])
 api.add_resource(VideosListApi,"/home/videosList",methods=["GET"])
 api.add_resource(SendMailApi,"/home/sendMail",methods=['POST'])
 api.add_resource(CategoryDetailListApi,"/home/categoryDetail/<string:category>",methods=['GET'])
+api.add_resource(CategoryDetailListAllApi,"/home/categoryDetailAll",methods=['GET'])
+
 api.add_resource(CategoryDetailColorListApi,"/home/categoryDetailColor/<string:category>",methods=['GET'])
 api.add_resource(CategoryProductDetailApi,'/home/categoryProductDetail/<string:productName>',methods=['GET'])
 api.add_resource(CategoryDetailByFinishListApi,'/home/categoryProductFinish/<string:category>/<string:finish>')

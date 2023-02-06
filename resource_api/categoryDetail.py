@@ -7,6 +7,12 @@ class CategoryDetailListApi(Resource):
         b = a.getCategoryDetailList(category)
         return jsonify(b)
     
+class CategoryDetailListAllApi(Resource):
+    def get(self):
+        a = CategoryDetail()
+        b = a.getCategoryDetailListAll()
+        return jsonify(b)
+    
     
 class CategoryDetailByFinishListApi(Resource):
     def get(self,category,finish):
